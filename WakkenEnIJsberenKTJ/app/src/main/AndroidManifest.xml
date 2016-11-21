@@ -15,6 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LevelSelect" />
+        <activity android:name=".GameGuide" />
+        <activity android:name=".LevelComplete" />
+        <activity android:name=".Level"></activity>
     </application>
 
 </manifest>
