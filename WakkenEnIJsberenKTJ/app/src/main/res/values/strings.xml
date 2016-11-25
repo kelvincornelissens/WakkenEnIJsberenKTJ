@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">WakkenEnIJsberenKTJ</string>
+    <string name="app_name">Holes in the ice and polar bears</string>
+    <string name="about_the_game">
+        You let someone throw the dice and put the stone in front of you. Then tell everyone how many bears and wakken you see. The idea is that everyone has to guess at the next pitch and wakken how many bears are there to see.
+    </string>
+    <string name="back">back</string>
 </resources>

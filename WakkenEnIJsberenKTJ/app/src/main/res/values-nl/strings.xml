@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wakken en ijsberen</string>
+    <string name="about_the_game">Hierbij hebt u de keuze om 3, 4, 5 of 6 dobbelstenen te werpen.
+Als volgt moet u invullen hoeveel wakken, ijsberen en pinguins u ziet.
+Hoe werkt het? \n\r
+-Een wak is het middelste oog van een dobbelsteen.
+
+        \n\r
+-De ijsberen zijn de ogen om een wak heen. Alleen om een wak zitten ijsberen!
+Zit er GEEN wak op de dobbelsteen, dan is er ook geen ijsbeer.
+
+        \n\r
+-De pinguins zijn de ogen aan de achterkant van de dobbelsteen.
+De voorkant en de achterkant van de dobbelsteen zijn altijd samen 7 ogen.</string>
+</resources>
