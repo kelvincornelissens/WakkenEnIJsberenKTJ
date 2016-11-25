@@ -1,5 +1,7 @@
 package GameClasses;
 
+import java.util.Random;
+
 /**
  * Created by Kelvin on 21-11-2016.
  */
@@ -10,7 +12,58 @@ public class Dice {
     private int pinguins;
     private int aantalOgen;
 
+
+
+
+
+    //Gooit een random nummer op basis van dit nummer worden de velden berekent
     public void roll(){
+        Random random = new Random();
+
+        int number = random.nextInt(6)+1;
+
+        pinguins = 7 - number;
+
+        switch (number){
+            case 1:
+                wakken = 1;
+                ijsberen = 0;
+
+                break;
+
+            case 2:
+                wakken = 0;
+                ijsberen = 0;
+
+                break;
+
+            case 3:
+                wakken = 1;
+                ijsberen = 2;
+                break;
+
+            case 4:
+                wakken = 0;
+                ijsberen = 0;
+                break;
+
+
+            case 5:
+                wakken = 1;
+                ijsberen = 4;
+                break;
+
+
+            case 6:
+                wakken = 0;
+                ijsberen = 0;
+                break;
+
+
+
+        }
+
+
 
     }
 
