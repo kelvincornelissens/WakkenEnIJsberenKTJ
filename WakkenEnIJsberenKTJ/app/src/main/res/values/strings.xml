@@ -4,4 +4,8 @@
         You let someone throw the dice and put the stone in front of you. Then tell everyone how many bears and wakken you see. The idea is that everyone has to guess at the next pitch and wakken how many bears are there to see.
     </string>
     <string name="back">back</string>
+    <string name="play">Play</string>
+    <string name="game_guide">Game Guide</string>
+    <string name="made_by">Made by: \nKelvin Cornelissens \nTim Bruntink \nJordy Mengenrink</string>
+    <string name="audio">Audio</string>
 </resources>
