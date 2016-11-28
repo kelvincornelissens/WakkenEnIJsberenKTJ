@@ -10,8 +10,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class ScoreDB extends SQLiteOpenHelper {
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("CREATE TABLE Score (Name VARCHAR (10), Score INT, Id INT PRIMARY KEY);");
     }
 
     @Override
