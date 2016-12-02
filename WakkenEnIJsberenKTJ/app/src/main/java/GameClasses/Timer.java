@@ -31,7 +31,6 @@ public class Timer {
 
 
 
-
         long currentTime = Calendar.getInstance().getTimeInMillis();
         long endTime     = currentTime + (aantalSeconden*1000);
 

@@ -9,6 +9,7 @@ public class Level {
     int pogingenVoorHint;
     boolean pinguins;
     int aantalSeconden;
+    int aantalDice;
 
     public int getAantalSeconden() {
         return aantalSeconden;
@@ -34,11 +35,21 @@ public class Level {
         this.pogingenVoorHint = pogingenVoorHint;
     }
 
-    public Level(int pogingenVoorHint, boolean pinguins, int aantalSeconden){
+    public int getAantalDice(){
+
+        return  aantalDice;
+
+    }
+
+    public void setAantalDice(int aantalDice){
+        this.aantalDice = aantalDice;
+    }
+
+    public Level(int pogingenVoorHint, boolean pinguins, int aantalSeconden,int aantalDice){
         this.pogingenVoorHint = pogingenVoorHint;
         this.pinguins = pinguins;
         this.aantalSeconden = aantalSeconden;
-
+        this.aantalDice = aantalDice;
     }
 
 

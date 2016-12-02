@@ -10,6 +10,14 @@ public class Result {
     private int pinguins;
 
 
+    public Result(){}
+
+    public Result(int wakken, int ijsberen, int pinguins){
+        setWakken(wakken);
+        setIjsberen(ijsberen);
+        setPinguins(pinguins);
+    }
+
     public int getWakken() {
         return wakken;
     }
