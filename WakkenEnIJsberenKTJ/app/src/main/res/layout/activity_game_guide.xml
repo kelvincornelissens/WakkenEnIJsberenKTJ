@@ -35,6 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.1"
         android:text="@string/back"
-        android:id="@+id/gameguide_buttonBack"
+        android:id="@+id/guidebackBtn"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

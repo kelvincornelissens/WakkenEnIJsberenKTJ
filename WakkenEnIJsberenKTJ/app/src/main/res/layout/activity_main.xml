@@ -1,17 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.kelvin.wakkenenijsberenktj.MainActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        app:srcCompat="@drawable/icebackground"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView5" />
+
+    <TextView
+        android:text="Kelvin Cornelissens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Tim Bruntink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Jordy Mengerink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:id="@+id/textView6"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="Spel spelen"
+        android:background="@drawable/icebutton2"
+        android:id="@+id/playBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="75dp"
+        android:layout_width="350dp"
+        android:textSize="18sp"
+        android:layout_above="@+id/guideBtn"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/beren_pinguins"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/guideBtn"
+        android:layout_alignRight="@+id/playBtn"
+        android:layout_alignEnd="@+id/playBtn" />
+
+    <TextView
+        android:text="Gemaakt door:"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textView2"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_width="200dp"
+        android:textSize="24sp"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_below="@+id/guideBtn"
+        android:layout_alignRight="@+id/guideBtn"
+        android:layout_alignEnd="@+id/guideBtn"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/unmute"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginBottom="17dp"
+        android:id="@+id/songButton" />
+
+    <Button
+        android:text="Speluitleg"
+        android:background="@drawable/icebutton2"
+        android:id="@+id/guideBtn"
+        android:layout_height="75dp"
+        android:layout_width="350dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/playBtn"
+        android:layout_alignStart="@+id/playBtn" />
+
 </RelativeLayout>
