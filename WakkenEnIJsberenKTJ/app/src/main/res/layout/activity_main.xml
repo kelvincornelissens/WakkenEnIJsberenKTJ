@@ -59,12 +59,12 @@
     <Button
         android:text="Spel spelen"
         android:background="@drawable/icebutton2"
-        android:id="@+id/button"
+        android:id="@+id/playBtn"
         android:layout_gravity="center_horizontal"
         android:layout_height="75dp"
         android:layout_width="350dp"
         android:textSize="18sp"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/guideBtn"
         android:layout_centerHorizontal="true" />
 
     <ImageView
@@ -72,9 +72,9 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/beren_pinguins"
         android:id="@+id/imageView"
-        android:layout_above="@+id/button2"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:layout_above="@+id/guideBtn"
+        android:layout_alignRight="@+id/playBtn"
+        android:layout_alignEnd="@+id/playBtn" />
 
     <TextView
         android:text="Gemaakt door:"
@@ -86,9 +86,9 @@
         android:textSize="24sp"
         android:layout_marginRight="60dp"
         android:layout_marginEnd="60dp"
-        android:layout_below="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
+        android:layout_below="@+id/guideBtn"
+        android:layout_alignRight="@+id/guideBtn"
+        android:layout_alignEnd="@+id/guideBtn"
         android:textColor="@android:color/white" />
 
     <Button
@@ -104,13 +104,13 @@
     <Button
         android:text="Speluitleg"
         android:background="@drawable/icebutton2"
-        android:id="@+id/button2"
+        android:id="@+id/guideBtn"
         android:layout_height="75dp"
         android:layout_width="350dp"
         android:layout_gravity="center_horizontal"
         android:textSize="18sp"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_alignLeft="@+id/playBtn"
+        android:layout_alignStart="@+id/playBtn" />
 
 </RelativeLayout>
