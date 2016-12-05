@@ -11,6 +11,7 @@ public class Level {
     int aantalSeconden;
     int aantalDice;
 
+    //Aantal seconden dat iemand heeft om een level te halen
     public int getAantalSeconden() {
         return aantalSeconden;
     }

@@ -31,6 +31,7 @@ public class ExampleUnitTest {
         int punten = game.answer(new Result(2,3,2));
 
 
+
         int i =0;
 
     }

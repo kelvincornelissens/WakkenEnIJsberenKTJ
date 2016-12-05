@@ -1,5 +1,7 @@
 package GameClasses;
 
+import android.app.Activity;
+
 /**
  * Created by Kelvin on 21-11-2016.
  */
@@ -16,21 +18,24 @@ public class Game {
         return this.timer;
     }
 
+    //Een array met dice
     public Dice[] getDices(){
 
         return dices;
     }
 
-    public Game(){
-        this.timer = new Timer();
+    public Game(Activity context){
+        this.timer = new Timer(context);
 
     }
 
-    public Game(Level level){
-        this();
+    public Game(Level level,Activity context){
+        this(context);
         setLevel(level);
     }
 
+
+    //set een level
     public void setLevel(Level level){
 
         this.level = level;
@@ -67,6 +72,8 @@ public class Game {
         return punten;
     }
 
+
+    //start de game
     public void start(){
 
         throwDice();
@@ -77,7 +84,7 @@ public class Game {
 
     }
 
-
+    //gooi met alle stenen
     private void throwDice(){
 
         for(Dice dice : dices){
