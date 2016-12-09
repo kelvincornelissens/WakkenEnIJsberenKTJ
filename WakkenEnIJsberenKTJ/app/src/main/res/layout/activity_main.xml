@@ -65,7 +65,8 @@
         android:layout_width="350dp"
         android:textSize="18sp"
         android:layout_above="@+id/guideBtn"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:elevation="0dp" />
 
     <ImageView
         android:layout_width="wrap_content"
