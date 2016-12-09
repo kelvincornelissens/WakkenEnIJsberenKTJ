@@ -77,7 +77,7 @@ public class Game {
     public void start(){
 
         throwDice();
-       // timer.startTimer();
+        timer.startTimer();
 
 
 

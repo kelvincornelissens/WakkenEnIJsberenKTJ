@@ -49,34 +49,47 @@ public class Timer {
 
 
 
-        long currentTime = Calendar.getInstance().getTimeInMillis();
-        final long endTime     = currentTime + (aantalSeconden*1000);
 
 
-        while (currentTime < endTime){
-            final long currentTimeT = currentTime;
-            try {
-                this.timeLeft = (int)(endTime - currentTime);
-                if(listener != null){
-                    context.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            listener.OnTimeLeftChange((int)(endTime - currentTimeT));
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+
+                final long currentTime = Calendar.getInstance().getTimeInMillis();
+                final long endTime = currentTime + (aantalSeconden * 1000);
+
+                while (currentTime < endTime) {
+                    final long currentTimeT = Calendar.getInstance().getTimeInMillis();
+                    try {
+                        Timer.this.timeLeft = (int) (endTime - currentTime);
+                        if (listener != null) {
+                            context.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    listener.OnTimeLeftChange((int)( (endTime - currentTimeT)/1000));
+                                }
+                            });
+
                         }
-                    });
+
+
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
 
                 }
-
-
-
-
-                Thread.sleep(1000);
-                currentTime = Calendar.getInstance().getTimeInMillis();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
 
-        }
+
+        };
+
+        Thread timerThread = new Thread(runnable);
+        timerThread.start();
+
+
+
 
 
     }
