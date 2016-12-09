@@ -1,10 +1,12 @@
 package GameClasses;
 
+import java.io.Serializable;
+
 /**
  * Created by Kelvin on 21-11-2016.
  */
 
-public class Level {
+public class Level implements Serializable{
 
     int pogingenVoorHint;
     boolean pinguins;
