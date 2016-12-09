@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import GameClasses.Dice;
+
 /**
  * Created by Tim on 5-12-2016.
  */
@@ -29,10 +32,16 @@ public class DiceFragment extends Fragment {
     }
 
 
-    public void setDice(int[] dice){
+    public void setDice(Dice[] dice){
+
+        ArrayList<Integer> ALdice = new ArrayList<Integer>();
+        for (Dice i : dice){
+            ALdice.add(i.getAantalOgen());
+        }
+
 
         ListView diceList = (ListView)view.findViewById(R.id.listViewDice);
-        DiceListAdapter adapter = new DiceListAdapter(getActivity(),R.layout.dice_adapter_item,dice);
+        DiceListAdapter adapter = new DiceListAdapter(getActivity(),R.layout.dice_adapter_item,ALdice);
         diceList.setAdapter(adapter);
 
     }

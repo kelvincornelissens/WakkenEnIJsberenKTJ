@@ -29,7 +29,7 @@ public class Game {
 
     }
 
-    public Game(Level level,Activity context){
+    public Game(Level level, Activity context){
         this(context);
         setLevel(level);
     }
@@ -77,7 +77,7 @@ public class Game {
     public void start(){
 
         throwDice();
-        timer.startTimer();
+       // timer.startTimer();
 
 
 
@@ -87,9 +87,13 @@ public class Game {
     //gooi met alle stenen
     private void throwDice(){
 
-        for(Dice dice : dices){
+        for(int i = 0; i < dices.length; i++){
+           Dice dice = this.dices[i];
             dice.roll();
+
+            dices[i] = dice;
         }
+
     }
 
 

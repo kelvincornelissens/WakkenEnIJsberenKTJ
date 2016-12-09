@@ -19,7 +19,7 @@
         <activity android:name=".LevelSelect" />
         <activity android:name=".GameGuide" />
         <activity android:name=".LevelComplete" />
-        <activity android:name=".Level"></activity>
+        <activity android:name=".LevelActivity"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 /**
  * Created by Tim on 5-12-2016.
  */
@@ -14,10 +16,11 @@ public class DiceListAdapter extends ArrayAdapter<Integer> {
 
     private int[] dices;
 
-    public DiceListAdapter(Context context, int resource,int[] dices) {
-        super(context, resource);
+    public DiceListAdapter(Context context, int resource,ArrayList<Integer> dices) {
+        super(context, resource,dices);
 
-        this.dices = dices;
+
+
     }
 
     @Override
@@ -27,7 +30,7 @@ public class DiceListAdapter extends ArrayAdapter<Integer> {
 
         if(view == null){
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            inflater.inflate(R.layout.dice_adapter_item,null);
+            view = inflater.inflate(R.layout.dice_adapter_item,null);
 
         }
 
@@ -35,7 +38,42 @@ public class DiceListAdapter extends ArrayAdapter<Integer> {
        ImageView imageView = (ImageView) view.findViewById(R.id.imageViewDice);
 
 
-        imageView.setImageResource(R.drawable.dice1);
+       // imageView.setImageResource(R.drawable.dice1);
+
+
+        int diceNumber = getItem(position);
+
+        switch (getItem(position)){
+            case 1:
+
+                imageView.setImageResource(R.drawable.dice1);
+                break;
+
+            case 2:
+
+                imageView.setImageResource(R.drawable.dice2);
+                break;
+
+            case 3:
+
+                imageView.setImageResource(R.drawable.dice3);
+                break;
+
+            case 4:
+
+                imageView.setImageResource(R.drawable.dice4);
+                break;
+
+            case 5:
+
+                imageView.setImageResource(R.drawable.dice5);
+                break;
+
+            case 6:
+
+                imageView.setImageResource(R.drawable.dice6);
+                break;
+        }
 
         return view;
     }
