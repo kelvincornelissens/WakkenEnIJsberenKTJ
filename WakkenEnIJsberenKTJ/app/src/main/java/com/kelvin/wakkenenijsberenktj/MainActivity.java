@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         final Button songButton = (Button)findViewById(R.id.songButton);
         playBtn = (Button)findViewById(R.id.playBtn);
         guideBtn = (Button)findViewById(R.id.guideBtn);
-
         music.initMediaPlayer(MainActivity.this, R.raw.seinfield);
         music.play();
         music.looping();
