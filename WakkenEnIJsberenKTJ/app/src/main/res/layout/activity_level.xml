@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1"
-    tools:context="com.kelvin.wakkenenijsberenktj.Level">
+    tools:context="com.kelvin.wakkenenijsberenktj.LevelActivity">
 
 
     <TextView
@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:layout_weight="0.1"
         android:id="@+id/LeveltextViewLevel"
         android:layout_gravity="center_horizontal" />
 
@@ -31,7 +30,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:layout_weight="0.1"
         android:id="@+id/LeveltextViewTimeLeft"
         android:layout_gravity="center_horizontal" />
 
@@ -40,7 +38,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.43"
+        android:id="@+id/downPanelLevel"
+        android:layout_weight="0.60"
         android:layout_gravity="center_horizontal"></FrameLayout>
 
 

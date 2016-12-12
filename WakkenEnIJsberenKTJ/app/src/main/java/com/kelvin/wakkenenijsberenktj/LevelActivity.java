@@ -7,10 +7,12 @@ import android.widget.TextView;
 import GameClasses.Game;
 import GameClasses.ITimer;
 import GameClasses.Level;
+import GameClasses.Result;
 
 public class LevelActivity extends AppCompatActivity {
 
     DiceFragment diceFragment;
+    DiceLevelFragment levelFragment;
     TextView textViewTimeLeft;
     Game game;
 
@@ -22,8 +24,18 @@ public class LevelActivity extends AppCompatActivity {
 
         textViewTimeLeft = (TextView)findViewById(R.id.LeveltextViewTimeLeft);
         diceFragment = new DiceFragment();
+        levelFragment = new DiceLevelFragment();
         getFragmentManager().beginTransaction().replace(R.id.topPanelLevel,diceFragment).commit();
+        getFragmentManager().beginTransaction().replace(R.id.downPanelLevel,levelFragment).commit();
 
+        levelFragment.setDiceLevelListener(new DiceLevelFragment.DiceLevelListener() {
+            @Override
+            public void OnAnswer(Result result) {
+                int goed = game.answer(result);
+                int fout = 3 - goed;
+               levelFragment.setGoedEnFout(goed,fout);
+            }
+        });
 
 
         Level level = (Level) getIntent().getExtras().getSerializable("level");
