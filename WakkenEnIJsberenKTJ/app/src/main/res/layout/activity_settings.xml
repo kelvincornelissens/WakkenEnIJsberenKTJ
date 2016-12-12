@@ -29,7 +29,6 @@
 
     <Space
         android:layout_width="match_parent"
-        android:
         android:layout_height="0dp" />
 
     <Button
