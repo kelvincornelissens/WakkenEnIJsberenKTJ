@@ -16,6 +16,15 @@ De voorkant en de achterkant van de dobbelsteen zijn altijd samen 7 ogen.</strin
 
 
 
+    <string name="back">Terug</string>
+    <string name="play">Spelen</string>
+    <string name="game_guide">Game uitleg</string>
+    <string name="made_by">Gecreëerd door: \nKelvin Cornelissens \nTim Bruntink \nJordy Mengenrink</string>
+    <string name="audio">Audio</string>
+
+
+    <string name="name">Naam</string>
+
 
 
 </resources>
