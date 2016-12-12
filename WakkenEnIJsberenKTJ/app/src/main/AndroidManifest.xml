@@ -9,7 +9,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +19,7 @@
         <activity android:name=".GameGuide" />
         <activity android:name=".LevelComplete" />
         <activity android:name=".LevelActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>

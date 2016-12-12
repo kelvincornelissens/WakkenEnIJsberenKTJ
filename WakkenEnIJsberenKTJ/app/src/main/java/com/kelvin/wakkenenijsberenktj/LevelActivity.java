@@ -1,5 +1,6 @@
 package com.kelvin.wakkenenijsberenktj;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -33,7 +34,12 @@ public class LevelActivity extends AppCompatActivity {
             public void OnAnswer(Result result) {
                 int goed = game.answer(result);
                 int fout = 3 - goed;
-               levelFragment.setGoedEnFout(goed,fout);
+             //  levelFragment.setGoedEnFout(goed,fout);
+
+
+                Intent intent = new Intent(getApplicationContext(),LevelComplete.class);
+                startActivity(intent);
+
             }
         });
 

@@ -20,7 +20,7 @@ public class DiceLevelFragment extends Fragment {
 
     DiceLevelListener listener;
 
-    EditText editTextWakken,editTextIjsberen,editTextPinguins,editTextGoed,editTextFout;
+    EditText editTextWakken,editTextIjsberen,editTextPinguins;
     Button buttonAnswer;
 
     @Nullable
@@ -31,8 +31,7 @@ public class DiceLevelFragment extends Fragment {
         editTextWakken   = (EditText)view.findViewById(R.id.editTextWakken);
         editTextIjsberen = (EditText)view.findViewById(R.id.editTextIjsberen);
         editTextPinguins = (EditText)view.findViewById(R.id.editTextPinguins);
-        editTextFout     = (EditText)view.findViewById(R.id.editTextFout);
-        editTextGoed     = (EditText)view.findViewById(R.id.editTextGoed);
+
 
         buttonAnswer = (Button)view.findViewById(R.id.buttonAnswer);
         buttonAnswer.setOnClickListener(new View.OnClickListener() {
@@ -54,11 +53,6 @@ public class DiceLevelFragment extends Fragment {
     }
 
 
-    public void setGoedEnFout(int goed, int fout){
-        editTextGoed.setText(String.valueOf(goed));
-        editTextFout.setText(String.valueOf(fout));
-
-    }
 
     public void setDiceLevelListener(DiceLevelListener listener){
         this.listener = listener;
