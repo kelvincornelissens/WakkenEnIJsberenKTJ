@@ -9,6 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:weightSum="1"
     tools:context="com.kelvin.wakkenenijsberenktj.SettingsActivity">
 
 
@@ -29,14 +30,14 @@
 
     <Space
         android:layout_width="match_parent"
-        android:
+        android:layout_weight="0.98"
         android:layout_height="0dp" />
 
     <Button
-        android:text="Button"
+        android:text="@string/save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:id="@+id/buttonSaveSettings" />
 
 
 </LinearLayout>
