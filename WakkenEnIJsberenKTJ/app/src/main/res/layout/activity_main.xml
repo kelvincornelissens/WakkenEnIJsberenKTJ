@@ -5,17 +5,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/icebackground"
     tools:context="com.kelvin.wakkenenijsberenktj.MainActivity">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icebackground"
-        android:scaleType="fitXY"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/imageView5" />
 
     <TextView
         android:text="Kelvin Cornelissens"
@@ -56,18 +47,6 @@
         android:textColor="@android:color/white"
         android:textAlignment="center" />
 
-    <Button
-        android:text="Spel spelen"
-        android:background="@drawable/icebutton2"
-        android:id="@+id/playBtn"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="75dp"
-        android:layout_width="350dp"
-        android:textSize="18sp"
-        android:layout_above="@+id/guideBtn"
-        android:layout_centerHorizontal="true"
-        android:elevation="0dp" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,7 +83,7 @@
 
     <Button
         android:text="Speluitleg"
-        android:background="@drawable/icebutton2"
+        android:background="@drawable/custom_button"
         android:id="@+id/guideBtn"
         android:layout_height="75dp"
         android:layout_width="350dp"
@@ -113,5 +92,17 @@
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/playBtn"
         android:layout_alignStart="@+id/playBtn" />
+
+    <Button
+        android:text="Spel spelen"
+        android:background="@drawable/custom_button"
+        android:id="@+id/playBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="75dp"
+        android:layout_width="350dp"
+        android:textSize="18sp"
+        android:elevation="0dp"
+        android:layout_above="@+id/guideBtn"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

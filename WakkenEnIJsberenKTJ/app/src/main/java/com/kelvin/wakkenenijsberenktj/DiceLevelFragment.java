@@ -31,8 +31,6 @@ public class DiceLevelFragment extends Fragment {
         editTextWakken   = (EditText)view.findViewById(R.id.editTextWakken);
         editTextIjsberen = (EditText)view.findViewById(R.id.editTextIjsberen);
         editTextPinguins = (EditText)view.findViewById(R.id.editTextPinguins);
-        editTextFout     = (EditText)view.findViewById(R.id.editTextFout);
-        editTextGoed     = (EditText)view.findViewById(R.id.editTextGoed);
 
         buttonAnswer = (Button)view.findViewById(R.id.buttonAnswer);
         buttonAnswer.setOnClickListener(new View.OnClickListener() {

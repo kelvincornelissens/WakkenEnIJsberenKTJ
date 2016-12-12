@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/wattex"
     tools:context="com.kelvin.wakkenenijsberenktj.LevelComplete">
 
     <TextView
@@ -19,16 +20,6 @@
         android:id="@+id/textView3"
         android:textStyle="normal|bold"
         android:textSize="24sp" />
-
-    <TextView
-        android:text="Highscores:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp"
-        android:id="@+id/textView7"
-        android:textStyle="normal|bold" />
 
     <View
         android:id="@+id/myRectangleView"
@@ -95,14 +86,34 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="13dp" />
 
+    <Button
+        android:text="Deel op Facebook"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/sharefbBtn"
+        android:layout_below="@+id/myRectangleView"
+        android:background="@drawable/custom_button"
+        android:layout_alignLeft="@+id/nextlvlBtn"
+        android:layout_alignStart="@+id/nextlvlBtn" />
+
+    <Button
+        android:text="Terug naar hoofdmenu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/mainmenuBtn"
+        android:background="@drawable/custom_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
-        android:text="Naam:"
+        android:text="Highscores:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textName"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/textView8"
-        android:layout_alignStart="@+id/textView8" />
+        android:layout_marginTop="36dp"
+        android:id="@+id/textView7"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Volgende level"
@@ -110,23 +121,18 @@
         android:id="@+id/nextlvlBtn"
         android:layout_width="200dp"
         android:layout_below="@+id/sharefbBtn"
+        android:background="@drawable/icebutton2"
         android:layout_alignLeft="@+id/mainmenuBtn"
-        android:layout_alignStart="@+id/mainmenuBtn" />
+        android:layout_alignStart="@+id/mainmenuBtn"
+        android:layout_marginTop="11dp" />
 
-    <Button
-        android:text="Terug naar hoofdmenu"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/mainmenuBtn"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Deel op Facebook"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/sharefbBtn"
-        android:layout_below="@+id/myRectangleView"
-        android:layout_alignLeft="@+id/nextlvlBtn"
-        android:layout_alignStart="@+id/nextlvlBtn" />
+    <TextView
+        android:text="Naam:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textName"
+        android:layout_below="@+id/textView8"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_marginTop="31dp" />
 </RelativeLayout>

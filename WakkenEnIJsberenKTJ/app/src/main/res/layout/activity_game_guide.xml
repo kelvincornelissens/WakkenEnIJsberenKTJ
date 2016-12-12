@@ -7,17 +7,8 @@
     android:layout_height="match_parent"
     android:weightSum="1"
     android:orientation="vertical"
+    android:background="@drawable/wattex"
     tools:context="com.kelvin.wakkenenijsberenktj.GameGuide">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/wattex"
-        android:scaleType="fitXY"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/imageView5" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,7 +40,7 @@
         android:layout_weight="0.1"
         android:text="@string/back"
         android:id="@+id/guidebackBtn"
-        android:background="@drawable/icebutton2"
+        android:background="@drawable/custom_button"
         android:layout_gravity="center_horizontal"
         android:layout_height="75dp"
         android:layout_below="@+id/textView2"
