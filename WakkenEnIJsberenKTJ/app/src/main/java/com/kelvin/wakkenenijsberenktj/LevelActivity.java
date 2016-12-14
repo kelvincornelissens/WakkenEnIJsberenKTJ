@@ -1,7 +1,9 @@
 package com.kelvin.wakkenenijsberenktj;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,10 +62,37 @@ public class LevelActivity extends AppCompatActivity {
 
 
 
+
+
+
         game.getTimer().setListener(new ITimer() {
             @Override
             public void OnTimeLeftChange(int secondsLeft) {
-                textViewTimeLeft.setText(String.valueOf(secondsLeft));
+
+
+                if(secondsLeft < 0){
+                    if(secondsLeft == -1) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(LevelActivity.this);
+                        builder.setMessage("U hebt gefaald, jammerrrr hooorrr!!!").setTitle("Keihard gefaald");
+                        builder.setPositiveButton("Ja, ik ben te traag", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
+                                intent.putExtra("level", (Level) getIntent().getExtras().getSerializable("level"));
+                                startActivity(intent);
+                            }
+                        });
+
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+
+                    }
+                }else {
+                    textViewTimeLeft.setText(String.valueOf(secondsLeft));
+
+
+                }
+
             }
         });
 
