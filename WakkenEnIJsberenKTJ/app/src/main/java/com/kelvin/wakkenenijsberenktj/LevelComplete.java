@@ -1,11 +1,13 @@
 package com.kelvin.wakkenenijsberenktj;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.facebook.FacebookSdk;
 import com.facebook.share.model.ShareLinkContent;
@@ -23,10 +25,22 @@ public class LevelComplete extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_complete);
         Level lvl = (Level)getIntent().getExtras().getSerializable("level");
+        TextView nameText = (TextView)findViewById(R.id.textName);
+        TextView scoreText = (TextView)findViewById(R.id.textScore);
+        TextView successText = (TextView)findViewById(R.id.textSucces);
         final int lvlNr = lvl.getLvlNr() + 1;
+
+        SharedPreferences sf = getSharedPreferences("wakken_en_ijsberen",this.MODE_PRIVATE);
+        String name = sf.getString("player_name", "");
+        int Score = 3;
+
+        nameText.setText(getResources().getString(R.string.nameComplete) + " " + name);
+        successText.setText(name + " " + getResources().getString(R.string.heeftlevel) + " " + lvl.getLvlNr() + " " + getResources().getString(R.string.succesfully));
 
         Button vlevel = (Button)findViewById(R.id.nextlvlBtn);
         Button menuButton = (Button)findViewById(R.id.mainmenuBtn);
+
+        // Facebook Sharebutton
         ShareButton shareButton = (ShareButton)findViewById(R.id.sharefbBtn);
         ShareLinkContent content = new ShareLinkContent.Builder()
                 .setContentTitle(name + " heeft een level gehaald in Wakken en Ijsberen")
