@@ -31,11 +31,7 @@ public class LevelSelect extends AppCompatActivity {
                 intent.putExtra("level",level);
                 startActivity(intent);
 
-                if (buttonLevel1.isEnabled())
-                buttonLevel1.setBackgroundResource(R.drawable.icebutton);
-                else {
-                    buttonLevel1.setBackgroundResource(R.drawable.icebutton2);
-                }
+
             }
         });
 

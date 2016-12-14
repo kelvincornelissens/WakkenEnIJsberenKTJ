@@ -72,6 +72,30 @@ public class Game {
         return punten;
     }
 
+    public String wrongAnswer(Result result){
+        int ijsberen = 0,pinguins =0,wakken =0;
+
+        String wrong =  "";
+
+        for (Dice dice : dices){
+            ijsberen += dice.getIjsberen();
+            pinguins += dice.getPinguins();
+            wakken   += dice.getWakken();
+
+        }
+
+        if(ijsberen != result.getIjsberen())
+            wrong += "ijsberen,";
+
+        if (pinguins != result.getPinguins())
+           wrong += "pinguins,";
+
+        if(wakken != result.getWakken())
+            wrong += "wakken,";
+
+        return wrong;
+    }
+
 
     //start de game
     public void start(){

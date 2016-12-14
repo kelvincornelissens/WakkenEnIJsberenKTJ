@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import GameClasses.Game;
 import GameClasses.ITimer;
@@ -30,18 +31,28 @@ public class LevelActivity extends AppCompatActivity {
         getFragmentManager().beginTransaction().replace(R.id.downPanelLevel,levelFragment).commit();
         final Level level = (Level) getIntent().getExtras().getSerializable("level");
         game = new Game(level,this);
+        TextView lvlText = (TextView)findViewById(R.id.LeveltextViewLevel);
+        lvlText.setText("Level " + level.getLvlNr());
 
         levelFragment.setDiceLevelListener(new DiceLevelFragment.DiceLevelListener() {
             @Override
             public void OnAnswer(Result result) {
                 int goed = game.answer(result);
                 int fout = 3 - goed;
-               levelFragment.setGoedEnFout(goed,fout);
+                //levelFragment.setGoedEnFout(goed,fout);
 
+                if(fout == 0) {
+                    Intent intent = new Intent(getApplicationContext(), LevelComplete.class);
+                    intent.putExtra("level", level);
+                    startActivity(intent);
+                }
 
-                Intent intent = new Intent(getApplicationContext(),LevelComplete.class);
-                intent.putExtra("level", level);
-                startActivity(intent);
+                if(fout > 0){
+                    String wrongAnswer = "De volgende antwoorden zijn fout: " + game.wrongAnswer(result);
+                    Toast.makeText(getApplicationContext(), wrongAnswer, Toast.LENGTH_SHORT).show();
+
+                }
+
 
             }
         });
