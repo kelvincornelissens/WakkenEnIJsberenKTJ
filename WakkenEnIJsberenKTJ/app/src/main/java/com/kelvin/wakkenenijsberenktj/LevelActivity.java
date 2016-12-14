@@ -28,24 +28,26 @@ public class LevelActivity extends AppCompatActivity {
         levelFragment = new DiceLevelFragment();
         getFragmentManager().beginTransaction().replace(R.id.topPanelLevel,diceFragment).commit();
         getFragmentManager().beginTransaction().replace(R.id.downPanelLevel,levelFragment).commit();
+        final Level level = (Level) getIntent().getExtras().getSerializable("level");
+        game = new Game(level,this);
 
         levelFragment.setDiceLevelListener(new DiceLevelFragment.DiceLevelListener() {
             @Override
             public void OnAnswer(Result result) {
                 int goed = game.answer(result);
                 int fout = 3 - goed;
-             //  levelFragment.setGoedEnFout(goed,fout);
+               levelFragment.setGoedEnFout(goed,fout);
 
 
                 Intent intent = new Intent(getApplicationContext(),LevelComplete.class);
+                intent.putExtra("level", level);
                 startActivity(intent);
 
             }
         });
 
 
-        Level level = (Level) getIntent().getExtras().getSerializable("level");
-        game = new Game(level,this);
+
 
         game.getTimer().setListener(new ITimer() {
             @Override
@@ -54,11 +56,7 @@ public class LevelActivity extends AppCompatActivity {
             }
         });
 
-
         game.start();
-
-
-
     }
 
 

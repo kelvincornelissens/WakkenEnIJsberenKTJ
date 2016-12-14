@@ -26,7 +26,7 @@ public class LevelSelect extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),LevelActivity.class);
 
-                Level level = new Level(4,true,180,3);
+                Level level = new Level(4,true,180,3,1);
 
                 intent.putExtra("level",level);
                 startActivity(intent);
@@ -44,7 +44,7 @@ public class LevelSelect extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),LevelActivity.class);
-                Level level = new Level(8,true,90,4);
+                Level level = new Level(8,true,100,4,2);
 
                 intent.putExtra("level",level);
                 startActivity(intent);
@@ -56,7 +56,7 @@ public class LevelSelect extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),LevelActivity.class);
-                Level level = new Level(77,true,45,12);
+                Level level = new Level(77,true,70,12,3);
 
                 intent.putExtra("level",level);
                 startActivity(intent);
