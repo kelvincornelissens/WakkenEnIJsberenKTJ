@@ -38,4 +38,12 @@
         android:background="@drawable/custom_button"
         android:id="@+id/buttonLevel3" />
 
+    <ToggleButton
+        android:text="Pinguins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonPinguins"
+        android:layout_weight="4.5" />
+
+
 </LinearLayout>

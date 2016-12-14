@@ -63,7 +63,7 @@ public class Game {
         if(ijsberen == result.getIjsberen())
             punten++;
 
-        if (pinguins == result.getPinguins())
+        if (pinguins == result.getPinguins() && level.isPinguins())
             punten++;
 
         if(wakken == result.getWakken())

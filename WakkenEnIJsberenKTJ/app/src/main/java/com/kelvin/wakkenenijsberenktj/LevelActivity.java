@@ -40,7 +40,17 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void OnAnswer(Result result) {
                 int goed = game.answer(result);
-                int fout = 3 - goed;
+
+                int fout = -1;
+
+                if(level.isPinguins()){
+                    fout = 3 - goed;
+
+                }else {
+                    fout = 2 - goed;
+
+                }
+
                 //levelFragment.setGoedEnFout(goed,fout);
 
                 if(fout == 0) {

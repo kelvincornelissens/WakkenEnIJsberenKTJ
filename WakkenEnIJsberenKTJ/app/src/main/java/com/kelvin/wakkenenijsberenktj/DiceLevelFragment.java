@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import GameClasses.Level;
 import GameClasses.Result;
 
 /**
@@ -41,8 +42,10 @@ public class DiceLevelFragment extends Fragment {
                     Result result = new Result();
                     result.setIjsberen(Integer.parseInt(editTextIjsberen.getText().toString()));
                     result.setWakken(Integer.parseInt(editTextWakken.getText().toString()));
-                    result.setPinguins(Integer.parseInt(editTextPinguins.getText().toString()));
 
+                    if(((Level)getActivity().getIntent().getExtras().getSerializable("level")).isPinguins()) {
+                        result.setPinguins(Integer.parseInt(editTextPinguins.getText().toString()));
+                    }
                     listener.OnAnswer(result);
                 }
             }
