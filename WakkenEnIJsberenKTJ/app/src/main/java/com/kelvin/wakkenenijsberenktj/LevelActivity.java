@@ -83,8 +83,8 @@ public class LevelActivity extends AppCompatActivity {
                 if(secondsLeft < 0){
                     if(secondsLeft == -1) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(LevelActivity.this);
-                        builder.setMessage("U hebt gefaald, jammerrrr hooorrr!!!").setTitle("Keihard gefaald");
-                        builder.setPositiveButton("Ja, ik ben te traag", new DialogInterface.OnClickListener() {
+                        builder.setMessage(getString(R.string.TimeOut)).setTitle(getString(R.string.TimeTitle));
+                        builder.setPositiveButton(getString(R.string.TimeConfirm), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent intent = new Intent(getApplicationContext(), LevelActivity.class);
