@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 import GameClasses.Level;
 import GameClasses.Result;
 
@@ -38,6 +39,9 @@ public class DiceLevelFragment extends Fragment {
         editTextPinguins = (EditText)view.findViewById(R.id.editTextPinguins);
         textViewPinguins = (TextView)view.findViewById(R.id.textView12);
 
+
+
+
         if(!level.isPinguins()){
             editTextPinguins.setVisibility(View.INVISIBLE);
             textViewPinguins.setVisibility(View.INVISIBLE);
@@ -50,6 +54,16 @@ public class DiceLevelFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(listener != null){
+
+                    if(editTextWakken.getText().toString().isEmpty()){
+                        editTextWakken.setText("0");
+                    }
+                    if (editTextIjsberen.getText().toString().isEmpty()){
+                        editTextIjsberen.setText("0");
+                    }
+                    if(editTextPinguins.getText().toString().isEmpty()){
+                        editTextPinguins.setText("0");
+                    }
 
                     Result result = new Result();
                     result.setIjsberen(Integer.parseInt(editTextIjsberen.getText().toString()));
