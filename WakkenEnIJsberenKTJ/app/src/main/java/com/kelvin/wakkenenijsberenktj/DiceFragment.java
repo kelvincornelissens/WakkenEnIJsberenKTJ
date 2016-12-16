@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -40,7 +42,7 @@ public class DiceFragment extends Fragment {
         }
 
 
-        ListView diceList = (ListView)view.findViewById(R.id.listViewDice);
+        GridView diceList = (GridView)view.findViewById(R.id.gridview);
         DiceListAdapter adapter = new DiceListAdapter(getActivity(),R.layout.dice_adapter_item,ALdice);
         diceList.setAdapter(adapter);
 
