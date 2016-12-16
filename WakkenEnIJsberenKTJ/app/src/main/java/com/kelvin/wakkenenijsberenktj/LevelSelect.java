@@ -64,8 +64,8 @@ public class LevelSelect extends AppCompatActivity {
             }
         });
 
-        toggleButton.setTextOff("Pinguins zijn uit");
-        toggleButton.setTextOn("Pinguins zijn aan");
+        toggleButton.setTextOff(getString(R.string.pinguinBtnOFF));
+        toggleButton.setTextOn(getString(R.string.pinguinBtnON));
         toggleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

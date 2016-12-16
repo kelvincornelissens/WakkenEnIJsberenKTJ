@@ -28,6 +28,8 @@ De voorkant en de achterkant van de dobbelsteen zijn altijd samen 7 ogen.</strin
     <string name="heeftlevel"> heeft level </string>
     <string name="nameComplete">naam:   </string>
     <string name="succesfully"> voltooid!</string>
-
+    <string name="TimeOut">Oeps.. Je tijd is voorbij! Probeer het nog eens!</string>
+    <string name="pinguinBtnON">Pinguins: AAN</string>
+    <string name="pinguinBtnOFF">Pinguins: UIT</string>
 
 </resources>
