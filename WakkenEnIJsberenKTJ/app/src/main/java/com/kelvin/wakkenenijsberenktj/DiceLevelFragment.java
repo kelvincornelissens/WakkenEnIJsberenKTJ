@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import GameClasses.Level;
 import GameClasses.Result;
@@ -22,6 +23,7 @@ public class DiceLevelFragment extends Fragment {
     DiceLevelListener listener;
 
     EditText editTextWakken,editTextIjsberen,editTextPinguins,editTextGoed,editTextFout;
+    TextView textViewPinguins;
     Button buttonAnswer;
 
     @Nullable
@@ -29,9 +31,19 @@ public class DiceLevelFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dicelevel,null);
 
+        Level level = (Level) getActivity().getIntent().getExtras().getSerializable("level");
+
         editTextWakken   = (EditText)view.findViewById(R.id.editTextWakken);
         editTextIjsberen = (EditText)view.findViewById(R.id.editTextIjsberen);
         editTextPinguins = (EditText)view.findViewById(R.id.editTextPinguins);
+        textViewPinguins = (TextView)view.findViewById(R.id.textView12);
+
+        if(!level.isPinguins()){
+            editTextPinguins.setVisibility(View.INVISIBLE);
+            textViewPinguins.setVisibility(View.INVISIBLE);
+
+        }
+
 
         buttonAnswer = (Button)view.findViewById(R.id.buttonAnswer);
         buttonAnswer.setOnClickListener(new View.OnClickListener() {

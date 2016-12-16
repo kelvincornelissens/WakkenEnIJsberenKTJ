@@ -23,6 +23,8 @@ public class LevelSelect extends AppCompatActivity {
         buttonLevel2 = (Button) findViewById(R.id.buttonLevel2);
         buttonLevel3 = (Button) findViewById(R.id.buttonLevel3);
         toggleButton = (ToggleButton) findViewById(R.id.toggleButtonPinguins);
+        toggleButton.setChecked(true);
+        toggleButton.setText("Pinguins zijn aan");
 
         buttonLevel1.setOnClickListener(new View.OnClickListener() {
             @Override

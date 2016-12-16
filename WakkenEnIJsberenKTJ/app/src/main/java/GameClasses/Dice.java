@@ -4,6 +4,7 @@ import java.util.Random;
 
 /**
  * Created by Kelvin on 21-11-2016.
+ *
  */
 
 public class Dice {
@@ -23,7 +24,11 @@ public class Dice {
         int number = random.nextInt(6)+1;
         this.aantalOgen = number;
 
-        pinguins = 7 - number;
+        if(aantalOgen%2 != 0) {
+            pinguins = 7 - number;
+        }else{
+            pinguins = 0;
+        }
 
         switch (number){
             case 1:
