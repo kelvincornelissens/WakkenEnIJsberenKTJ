@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -24,17 +25,19 @@ public class LevelComplete extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_complete);
+
         Level lvl = (Level)getIntent().getExtras().getSerializable("level");
         TextView nameText = (TextView)findViewById(R.id.textName);
         TextView scoreText = (TextView)findViewById(R.id.textScore);
         TextView successText = (TextView)findViewById(R.id.textSucces);
         final int lvlNr = lvl.getLvlNr() + 1;
 
-        SharedPreferences sf = getSharedPreferences("wakken_en_ijsberen",this.MODE_PRIVATE);
+        SharedPreferences sf = PreferenceManager.getDefaultSharedPreferences(this);
         String name = sf.getString("player_name", "");
-        int Score = 3;
+        score = getIntent().getExtras().getInt("score",3);
 
         nameText.setText(getResources().getString(R.string.nameComplete) + " " + name);
+        scoreText.setText("Score: "+score);
         successText.setText(name + " " + getResources().getString(R.string.heeftlevel) + " " + lvl.getLvlNr() + " " + getResources().getString(R.string.succesfully));
 
         Button vlevel = (Button)findViewById(R.id.nextlvlBtn);

@@ -61,11 +61,13 @@ public class Timer {
                 while (currentTime < endTime) {
                     final long currentTimeT = Calendar.getInstance().getTimeInMillis();
                     try {
-                        Timer.this.timeLeft = (int) (endTime - currentTime);
+                        Timer.this.timeLeft = (int) (endTime - currentTimeT);
                         if (listener != null) {
+
                             context.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
+                                    timeLeft = (int) (endTime - currentTimeT);
                                     listener.OnTimeLeftChange((int)( (endTime - currentTimeT)/1000));
                                 }
                             });

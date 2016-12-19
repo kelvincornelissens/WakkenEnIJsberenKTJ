@@ -56,6 +56,8 @@ public class LevelActivity extends AppCompatActivity {
                 if(fout == 0) {
                     Intent intent = new Intent(getApplicationContext(), LevelComplete.class);
                     intent.putExtra("level", level);
+                    int time_left = (game.getTimer().getTimeLeft()/1000)*3;
+                    intent.putExtra("score",time_left);
                     startActivity(intent);
                 }
 
@@ -83,7 +85,7 @@ public class LevelActivity extends AppCompatActivity {
                 if(secondsLeft < 0){
                     if(secondsLeft == -1) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(LevelActivity.this);
-                        builder.setMessage("U hebt gefaald, jammerrrr hooorrr!!!").setTitle("Keihard gefaald");
+                        builder.setMessage(getString(R.string.TimeOut)).setTitle("");
                         builder.setPositiveButton("Ja, ik ben te traag", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

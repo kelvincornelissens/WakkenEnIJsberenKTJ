@@ -2,6 +2,7 @@ package com.kelvin.wakkenenijsberenktj;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
         buttonSave = (Button) findViewById(R.id.buttonSaveSettings);
 
 
-        final SharedPreferences sharedPreferences = getSharedPreferences("wakken_en_ijsberen",this.MODE_PRIVATE);
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String name = sharedPreferences.getString("player_name","");
         editTextName.setText(name);
 
