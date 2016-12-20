@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:weightSum="1"
+    android:background="@drawable/wattex"
     tools:context="com.kelvin.wakkenenijsberenktj.SettingsActivity">
 
 
@@ -36,7 +37,8 @@
     <Button
         android:text="@string/save"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/icebutton2"
+        android:layout_height="75dp"
         android:id="@+id/buttonSaveSettings" />
 
 

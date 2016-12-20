@@ -40,7 +40,7 @@ public class LevelComplete extends AppCompatActivity {
         scoreText.setText("Score: "+score);
         successText.setText(name + " " + getResources().getString(R.string.heeftlevel) + " " + lvl.getLvlNr() + " " + getResources().getString(R.string.succesfully));
 
-        Button vlevel = (Button)findViewById(R.id.nextlvlBtn);
+        final Button vlevel = (Button)findViewById(R.id.nextlvlBtn);
         Button menuButton = (Button)findViewById(R.id.mainmenuBtn);
 
         // Facebook Sharebutton
@@ -61,11 +61,19 @@ public class LevelComplete extends AppCompatActivity {
                 if (lvlNr == 2) {
                     level = new Level(8, true, 100, 4, lvlNr);
                 }
-                else{
+                else if (lvlNr == 3){
                     level = new Level(77,true,70,12,3);
                 }
 
                 intent.putExtra("level",level);
+                startActivity(intent);
+            }
+        });
+
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
