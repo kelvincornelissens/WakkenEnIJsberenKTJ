@@ -15,7 +15,9 @@
     <string name="nameComplete">name:   </string>
     <string name="succesfully"> succesfully!</string>
     <string name="facebook_app_id">1695368487443057</string>
+    <string name="TimeTitle">No time left</string>
     <string name="TimeOut">Oops.. You ran out of time! Try again!</string>
+    <string name="TimeConfirm">Try again</string>
     <string name="pinguinBtnON">Penguins: ON</string>
     <string name="pinguinBtnOFF">Penguins: OFF</string>
 </resources>
