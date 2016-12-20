@@ -19,13 +19,14 @@ public class LevelActivity extends AppCompatActivity {
     DiceLevelFragment levelFragment;
     TextView textViewTimeLeft;
     Game game;
+    boolean canFail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
 
-
+        canFail = true;
         textViewTimeLeft = (TextView)findViewById(R.id.LeveltextViewTimeLeft);
         diceFragment = new DiceFragment();
         levelFragment = new DiceLevelFragment();
@@ -57,6 +58,7 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), LevelComplete.class);
                     intent.putExtra("level", level);
                     int time_left = (game.getTimer().getTimeLeft()/1000)*3;
+                    canFail = false;
                     intent.putExtra("score",time_left);
                     startActivity(intent);
                 }
@@ -83,7 +85,7 @@ public class LevelActivity extends AppCompatActivity {
 
 
                 if(secondsLeft < 0){
-                    if(secondsLeft == -1) {
+                    if(secondsLeft == -1 && canFail) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(LevelActivity.this);
 
                         builder.setMessage(getString(R.string.TimeOut)).setTitle(getString(R.string.TimeTitle));
